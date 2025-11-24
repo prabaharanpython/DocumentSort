@@ -1,0 +1,7 @@
+{
+  "name": "DocuSort",
+  "description": "Intelligent document organizer that automatically extracts details from IDs (Aadhaar, PAN, Voter) and certificates, organizing them into a clean folder structure.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
