@@ -1,0 +1,9 @@
+(# Netlify build settings - build command and publish directory)
+[build]
+	command = "npm run build"
+	publish = "dist"
+
+(# Optional development command when using `netlify dev` locally)
+[dev]
+	command = "npm run dev"
+	port = 5173

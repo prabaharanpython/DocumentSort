@@ -15,6 +15,19 @@ View your app in AI Studio: https://ai.studio/apps/drive/1giNUJ3nSQQEjpDGmCDoDGz
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+2. Set the `API_KEY` in a local environment file (e.g. `.env.local`) to your Gemini API key. The app reads `process.env.API_KEY` in `services/geminiService.ts`.
 3. Run the app:
    `npm run dev`
+
+## Deploying to Netlify
+
+1. Connect this GitHub repository to Netlify (Site → New site → Import from GitHub).
+2. Set the build settings on Netlify:
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+3. Add your Gemini API key in Netlify's Site settings → Environment → Environment variables:
+   - Key: `API_KEY`
+   - Value: (your Gemini / Google GenAI API key — keep this secret)
+4. Deploy — Netlify will run `npm install` then the build and publish the `dist` directory.
+
+If your project uses the `@google/genai` package, make sure it is a valid version in `package.json` (this repo uses `@google/genai@^1.30.0`).
